@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2.1.4
         with:
           name: npm-tarball
-          path: '*.tgz'
+          path: '**/*.tgz'
 
   deploy:
     needs: build
