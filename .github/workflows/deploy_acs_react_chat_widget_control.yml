@@ -41,7 +41,7 @@ jobs:
           node-version: 12.X
       - name: Download omnichannel-chat-sdk
         run: |
-          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-chat-sdk/tree/edtran/acs-client"
+          git clone --branch edtran/acs-client https://github.com/xTEddie/omnichannel-chat-sdk.git
       - name: Install NPM Packages
         working-directory: omnichannel-chat-sdk
         run: |
