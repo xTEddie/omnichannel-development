@@ -43,14 +43,18 @@ jobs:
         run: |
           npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-chat-sdk/tree/edtran/acs-client"
       - name: Install NPM Packages
+        working-directory: omnichannel-chat-sdk
         run: |
           npm install
       - name: Build NPM packages
+        working-directory: omnichannel-chat-sdk
         run: |
           npm run build:tsc
       - name: Npm packaging
+        working-directory: omnichannel-chat-sdk
         run: npm pack
       - name: Upload a Build Artifact
+        working-directory: omnichannel-chat-sdk
         uses: actions/upload-artifact@v2.1.4
         with:
           name: npm-tarball
