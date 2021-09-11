@@ -58,7 +58,6 @@ jobs:
         with:
           name: npm-tarball
           path: '*.tgz'
-        working-directory: omnichannel-chat-sdk
 
   deploy:
     needs: build
