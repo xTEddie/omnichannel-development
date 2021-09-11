@@ -29,7 +29,35 @@ env:
   CI: false        
 
 jobs:
-  react-chat-widget-control:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out for ${{ github.ref }}
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: 12.X
+      - name: Download omnichannel-chat-sdk
+        run: |
+          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-chat-sdk/tree/edtran/acs-client"
+      - name: Install NPM Packages
+        run: |
+          npm install
+      - name: Build NPM packages
+        run: |
+          npm run build:tsc
+      - name: Npm packaging
+        run: npm pack
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: npm-tarball
+          path: '*.tgz'
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -40,7 +68,6 @@ jobs:
         uses: actions/setup-node@v1.4.4
         with:
           node-version: 12.X
-
       - name: Download react-chat-widget-control
         run: |
           npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/react-chat-widget-control"
@@ -48,11 +75,15 @@ jobs:
         working-directory: react-chat-widget-control
         run: |
           yarn install
+      - uses: actions/download-artifact@v2.0.5
+        with:
+          name: npm-tarball
       - name: Update @microsoft/omnichannel-chat-sdk
         working-directory: react-chat-widget-control
         run: |
           yarn remove @microsoft/omnichannel-chat-sdk
-          yarn add @microsoft/omnichannel-chat-sdk@latest
+          unzip npm-tarball.zip
+          yarn add *.tgz
       - name: Configure Environment
         working-directory: react-chat-widget-control
         run: |
