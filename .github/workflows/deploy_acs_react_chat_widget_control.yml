@@ -54,11 +54,11 @@ jobs:
         working-directory: omnichannel-chat-sdk
         run: npm pack
       - name: Upload a Build Artifact
-        working-directory: omnichannel-chat-sdk
         uses: actions/upload-artifact@v2.1.4
         with:
           name: npm-tarball
           path: '*.tgz'
+        working-directory: omnichannel-chat-sdk
 
   deploy:
     needs: build
