@@ -90,7 +90,7 @@ jobs:
           ls ..
           yarn remove @microsoft/omnichannel-chat-sdk
           unzip npm-tarball.zip
-          yarn add **/*.tgz
+          yarn add ./**/*.tgz
       - name: Configure Environment
         working-directory: react-chat-widget-control
         run: |
