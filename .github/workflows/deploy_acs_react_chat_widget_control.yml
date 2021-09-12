@@ -85,11 +85,9 @@ jobs:
       - name: Update @microsoft/omnichannel-chat-sdk
         working-directory: react-chat-widget-control
         run: |
-          pwd
-          ls
-          ls ..
           yarn remove @microsoft/omnichannel-chat-sdk
           yarn add ./**/*.tgz
+          yarn add event-target-shim-es5
       - name: Configure Environment
         working-directory: react-chat-widget-control
         run: |
