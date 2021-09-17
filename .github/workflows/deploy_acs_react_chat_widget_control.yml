@@ -87,6 +87,7 @@ jobs:
         run: |
           yarn remove @microsoft/omnichannel-chat-sdk
           yarn add ./**/*.tgz
+          yarn add event-target-shim
           yarn add event-target-shim-es5
       - name: Configure Environment
         working-directory: react-chat-widget-control
