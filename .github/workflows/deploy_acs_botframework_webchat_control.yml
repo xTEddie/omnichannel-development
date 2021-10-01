@@ -83,7 +83,7 @@ jobs:
       - uses: actions/download-artifact@v2.0.5
         with:
           name: npm-tarball
-          path: botframework-webchat-control
+          path: omnichannel-chat-sdk/samples/botframework-webchat-control
       - name: Update @microsoft/omnichannel-chat-sdk
         working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
