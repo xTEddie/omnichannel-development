@@ -73,7 +73,7 @@ jobs:
           node-version: 12.X
       - name: Download botframework-webchat-control
         run: |
-          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-chat-sdk/tree/edtran/acs-client/samples/botframework-webchat-control" --auth=xTEddie:${{ secrets.GITHUB_TOKEN }}
+          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-chat-sdk/tree/edtran/acs-client/samples/botframework-webchat-control" --auth=xTEddie:${{ secrets.DOWNLOAD_TOKEN }}
       - name: Install NPM Packages
         working-directory: botframework-webchat-control
         run: |
