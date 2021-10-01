@@ -77,7 +77,7 @@ jobs:
           cd omnichannel-chat-sdk
           cd samples
       - name: Install NPM Packages
-        working-directory: botframework-webchat-control
+        working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
           npm install
       - uses: actions/download-artifact@v2.0.5
@@ -85,12 +85,12 @@ jobs:
           name: npm-tarball
           path: botframework-webchat-control
       - name: Update @microsoft/omnichannel-chat-sdk
-        working-directory: botframework-webchat-control
+        working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
           npm uninstall @microsoft/omnichannel-chat-sdk
           npm install ./**/*.tgz
       - name: Configure Environment
-        working-directory: botframework-webchat-control
+        working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
           echo "# Chat Widget Config" > .env
           echo "REACT_APP_orgId='$orgId'" >> .env
@@ -100,16 +100,16 @@ jobs:
           echo "# Transcript Config" >> .env
           echo "REACT_APP_email='$email'" >> .env
       - name: Set App Server Root
-        working-directory: botframework-webchat-control
+        working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
           echo "$(cat package.json | jq --arg url ${rootUrl} '. + {homepage: $url}')" > package.json
       - name: Build App
-        working-directory: botframework-webchat-control
+        working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
           yarn build
       - name: Configure Deployment
         run: |
-          mv botframework-webchat-control tmp
+          mv omnichannel-chat-sdk/samples/botframework-webchat-control tmp
           cp -r tmp/build .
           mv build botframework-webchat-control
       - name: Clean Up
