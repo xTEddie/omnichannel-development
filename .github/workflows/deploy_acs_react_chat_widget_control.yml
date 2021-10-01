@@ -85,7 +85,7 @@ jobs:
           name: npm-tarball
           path: omnichannel-chat-sdk/samples/react-chat-widget-control
       - name: Update @microsoft/omnichannel-chat-sdk
-        working-directory: react-chat-widget-control
+        working-directory: omnichannel-chat-sdk/samples/react-chat-widget-control
         run: |
           yarn remove @microsoft/omnichannel-chat-sdk
           yarn add ./**/*.tgz
