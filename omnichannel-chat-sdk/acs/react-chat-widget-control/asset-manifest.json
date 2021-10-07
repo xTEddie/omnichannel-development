@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/css/main.02bfd8e3.chunk.css",
-    "main.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/main.9fdcedc9.chunk.js",
-    "main.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/main.9fdcedc9.chunk.js.map",
-    "runtime-main.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/runtime-main.e62493c7.js",
-    "runtime-main.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/runtime-main.e62493c7.js.map",
+    "main.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/main.ae6746d1.chunk.js",
+    "main.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/main.ae6746d1.chunk.js.map",
+    "runtime-main.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/runtime-main.dd44d9a3.js",
+    "runtime-main.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/runtime-main.dd44d9a3.js.map",
     "static/css/2.98b667b4.chunk.css": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/css/2.98b667b4.chunk.css",
-    "static/js/2.0e86a44f.chunk.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.0e86a44f.chunk.js",
-    "static/js/2.0e86a44f.chunk.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.0e86a44f.chunk.js.map",
-    "static/js/3.2006cbdc.chunk.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/3.2006cbdc.chunk.js",
-    "static/js/3.2006cbdc.chunk.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/3.2006cbdc.chunk.js.map",
+    "static/js/2.2677ae0c.chunk.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.2677ae0c.chunk.js",
+    "static/js/2.2677ae0c.chunk.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.2677ae0c.chunk.js.map",
+    "static/js/3.82da2231.chunk.js": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/3.82da2231.chunk.js",
+    "static/js/3.82da2231.chunk.js.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/3.82da2231.chunk.js.map",
     "index.html": "/omnichannel-chat-sdk/acs/react-chat-widget-control/index.html",
     "static/css/2.98b667b4.chunk.css.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/css/2.98b667b4.chunk.css.map",
     "static/css/main.02bfd8e3.chunk.css.map": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/css/main.02bfd8e3.chunk.css.map",
-    "static/js/2.0e86a44f.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.0e86a44f.chunk.js.LICENSE.txt"
+    "static/js/2.2677ae0c.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/acs/react-chat-widget-control/static/js/2.2677ae0c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e62493c7.js",
+    "static/js/runtime-main.dd44d9a3.js",
     "static/css/2.98b667b4.chunk.css",
-    "static/js/2.0e86a44f.chunk.js",
+    "static/js/2.2677ae0c.chunk.js",
     "static/css/main.02bfd8e3.chunk.css",
-    "static/js/main.9fdcedc9.chunk.js"
+    "static/js/main.ae6746d1.chunk.js"
   ]
 }
