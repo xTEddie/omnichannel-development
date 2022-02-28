@@ -107,7 +107,7 @@ jobs:
           yarn build
       - name: Configure Deployment
         run: |
-          mv omnichannel-chat-sdk/samples/botframework-webchat-control tmp
+          mv botframework-webchat-control tmp
           cp -r tmp/build .
           mv build botframework-webchat-control
       - name: Clean Up
