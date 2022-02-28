@@ -41,7 +41,7 @@ jobs:
           node-version: 12.X
       - name: Download omnichannel-chat-sdk
         run: |
-          git clone --branch edtran/acs-client https://github.com/xTEddie/omnichannel-chat-sdk.git
+          git clone --branch edtran/acs https://github.com/xTEddie/omnichannel-chat-sdk.git
       - name: Install NPM Packages
         working-directory: omnichannel-chat-sdk
         run: |
@@ -73,7 +73,7 @@ jobs:
           node-version: 12.X
       - name: Download botframework-webchat-control
         run: |
-          git clone --branch edtran/acs-client https://github.com/xTEddie/omnichannel-chat-sdk.git
+          git clone --branch edtran/acs https://github.com/xTEddie/omnichannel-chat-sdk.git
           cd omnichannel-chat-sdk
           cd samples
       - name: Install NPM Packages
