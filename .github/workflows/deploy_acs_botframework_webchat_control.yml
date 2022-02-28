@@ -34,7 +34,6 @@ jobs:
     steps:
       - name: Checking out for ${{ github.ref }}
         uses: actions/checkout@v2
-
       - name: Use Node.js
         uses: actions/setup-node@v1.4.4
         with:
@@ -58,6 +57,11 @@ jobs:
         with:
           name: npm-tarball
           path: '*.tgz'
+      - name: Validate
+        working-directory: omnichannel-chat-sdk
+        run: |
+          pwd
+          ls          
 
   deploy:
     needs: build
