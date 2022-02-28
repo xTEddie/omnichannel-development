@@ -73,9 +73,7 @@ jobs:
           node-version: 12.X
       - name: Download botframework-webchat-control
         run: |
-          git clone --branch acs https://github.com/xTEddie/omnichannel-chat-sdk.git
-          cd omnichannel-chat-sdk
-          cd samples
+          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk-samples/tree/main/botframework-webchat-control"
       - name: Install NPM Packages
         working-directory: omnichannel-chat-sdk/samples/botframework-webchat-control
         run: |
