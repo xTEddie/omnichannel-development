@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2.1.4
         with:
           name: npm-tarball
-          path: '**/*.tgz'
+          path: '*.tgz'
 
   deploy:
     needs: build
@@ -86,7 +86,7 @@ jobs:
         working-directory: botframework-webchat-control
         run: |
           npm uninstall @microsoft/omnichannel-chat-sdk
-          npm install ./**/*.tgz
+          npm install ./*.tgz
       - name: Configure Environment
         working-directory: botframework-webchat-control
         run: |
